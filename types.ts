@@ -36,3 +36,4 @@ export type Player = {
     socket: WebSocket.WebSocket,
     hooks: ConnectingMindsHooks
 }
+export type Item={}
