@@ -1,5 +1,5 @@
 import WebSocket from "ws"
-import { ConnectingMindsHooks } from "../src/hooks/ConnectingMindsHooks"
+import { ConnectingMindsHooks } from "../src/hooks/connectingMindsHooks"
 
 
 
