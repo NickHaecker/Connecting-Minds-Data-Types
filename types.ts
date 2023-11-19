@@ -30,7 +30,8 @@ export enum ConnectingMindsEvents {
     ON_UNLOCK_PATH="ON_UNLOCK_PATH",
     ON_LOAD_ITEM="ON_LOAD_ITEM",
     ON_LOAD_POSITION="ON_LOAD_POSITION",
-    ON_UPDATE_ITEM="ON_UPDATE_ITEM"
+    ON_UPDATE_ITEM="ON_UPDATE_ITEM",
+    TEST="TEST"
 }
 export type Player = {
     socket: WebSocket.WebSocket,
