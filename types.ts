@@ -30,6 +30,7 @@ export enum ConnectingMindsEvents {
   INDEX_DATA = "INDEX_DATA",
   ON_INDEX_DATA = "ON_INDEX_DATA",
   TEST = "TEST",
+  FINISHED_INDEXING="FINISHED_INDEXING"
 }
 export type Player = {
   socket: WebSocket.WebSocket;
