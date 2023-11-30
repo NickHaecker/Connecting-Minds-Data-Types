@@ -1,5 +1,4 @@
-import WebSocket from "ws";
-import { ConnectingMindsHooks } from "../src/hooks/connectingMindsHooks";
+
 
 export enum ConnectingMindsEvents {
   CONNECT_PLAYER_ONE = "CONNECT_PLAYER_ONE",
@@ -31,15 +30,6 @@ export enum ConnectingMindsEvents {
   ON_INDEX_DATA = "ON_INDEX_DATA",
   TEST = "TEST",
   FINISHED_INDEXING = "FINISHED_INDEXING"
-}
-
-export class Player {
-  public socket: WebSocket.WebSocket;
-  public hooks: ConnectingMindsHooks
-  constructor(socket: WebSocket.WebSocket, hooks: ConnectingMindsHooks) {
-    this.socket = socket
-    this.hooks = hooks
-  }
 }
 
 export type Item = {};
