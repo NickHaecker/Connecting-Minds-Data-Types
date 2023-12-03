@@ -45,7 +45,7 @@ export type Item = {
 };
 export type Position = {
   _id: string;
-  name: string;
+  Name: string;
   ID: string;
 };
 export type FilesToIndex = {
