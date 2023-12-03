@@ -30,6 +30,8 @@ export enum ConnectingMindsEvents {
   FINISHED_INDEXING = "FINISHED_INDEXING",
   GET_ITEMS = "GET_ITEMS",
   ON_GET_ITEMS = "ON_GET_ITEMS",
+  GET_POSITIONS="GET_POSITIONS",
+  ON_GET_POSITIONS="ON_GET_POSITIONS"
 }
 
 export type PlacedItem = {
@@ -38,7 +40,6 @@ export type PlacedItem = {
 };
 export type Item = {
   _id: string;
-  id: string;
   Name: string;
   Description: string;
 };
