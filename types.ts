@@ -1,5 +1,3 @@
-
-
 export enum ConnectingMindsEvents {
   CONNECT_PLAYER_ONE = "CONNECT_PLAYER_ONE",
   CONNECT_PLAYER_TWO = "CONNECT_PLAYER_TWO",
@@ -31,10 +29,24 @@ export enum ConnectingMindsEvents {
   TEST = "TEST",
   FINISHED_INDEXING = "FINISHED_INDEXING",
   GET_ITEMS = "GET_ITEMS",
-  ON_GET_ITEMS = "ON_GET_ITEMS"
+  ON_GET_ITEMS = "ON_GET_ITEMS",
 }
 
-export type Item = {};
+export type PlacedItem = {
+  Item: Item;
+  Position: Position;
+};
+export type Item = {
+  _id: string;
+  id: string;
+  Name: string;
+  Description: string;
+};
+export type Position = {
+  _id: string;
+  name: string;
+  ID: string;
+};
 export type FilesToIndex = {
   IndexType: string;
   DataToIndex: any[];
