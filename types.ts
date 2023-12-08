@@ -47,15 +47,15 @@ export enum ConnectingMindsEvents {
   WATCHER_IS_CONTAINING="WATCHER_IS_CONTAINING"
 }
 
-export type PlacedItem = {
-  Item: Item;
-  Position: Position;
-};
 export type Item = {
   _id: string;
   Name: string;
   Description: string;
 };
+export type PlacedItem={
+  Item:Item;
+  Position:Position
+}
 export type Position = {
   _id: string;
   Name: string;
@@ -65,3 +65,8 @@ export type FilesToIndex = {
   IndexType: string;
   DataToIndex: any[];
 };
+export type Path={
+  _id:string;
+  Name:string;
+  Description:string
+}
