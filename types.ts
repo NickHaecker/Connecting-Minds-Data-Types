@@ -39,16 +39,17 @@ export enum ConnectingMindsEvents {
   ON_CONNECT_TO_SESSION = "ON_CONNECT_TO_SESSION",
   SESSION_NOT_FOUND = "SESSION_NOT_FOUND",
   SESSION_IS_OCCUPIED = "SESSION_IS_OCCUPIED",
-  ON_INIT_PLAYER="ON_INIT_PLAYER",
-  INIT_PLAYER="INIT_PLAYER",
-  INIT_WATCHER="INIT_WATCHER",
-  ON_INIT_WATCHER="ON_INIT_WATCHER",
-  NO_WATCHER="NO_WATCHER",
-  WATCHER_IS_CONTAINING="WATCHER_IS_CONTAINING",
-  MISSING="MISSING",
-  CONNECT_PLAYER="CONNECT_PLAYER",
-  DISCONNECT_PLAYER="DISCONNECT_PLAYER",
-  WATCHER_EXISTING="WATCHER_EXISTING"
+  ON_INIT_PLAYER = "ON_INIT_PLAYER",
+  INIT_PLAYER = "INIT_PLAYER",
+  INIT_WATCHER = "INIT_WATCHER",
+  ON_INIT_WATCHER = "ON_INIT_WATCHER",
+  NO_WATCHER = "NO_WATCHER",
+  WATCHER_IS_CONTAINING = "WATCHER_IS_CONTAINING",
+  MISSING = "MISSING",
+  CONNECT_PLAYER = "CONNECT_PLAYER",
+  DISCONNECT_PLAYER = "DISCONNECT_PLAYER",
+  WATCHER_EXISTING = "WATCHER_EXISTING",
+  ON_JOIN_SESSION = "ON_JOIN_SESSION"
 }
 
 export type Item = {
@@ -56,9 +57,9 @@ export type Item = {
   Name: string;
   Description: string;
 };
-export type PlacedItem={
-  Item:Item;
-  Position:Position
+export type PlacedItem = {
+  Item: Item;
+  Position: Position
 }
 export type Position = {
   _id: string;
@@ -69,8 +70,11 @@ export type FilesToIndex = {
   IndexType: string;
   DataToIndex: any[];
 };
-export type Path={
-  _id:string;
-  Name:string;
-  Description:string
+export type Path = {
+  _id: string;
+  Name: string;
+  Description: string
+}
+export type CreateSession = {
+  Type: string
 }
