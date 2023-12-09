@@ -49,7 +49,8 @@ export enum ConnectingMindsEvents {
   CONNECT_PLAYER = "CONNECT_PLAYER",
   DISCONNECT_PLAYER = "DISCONNECT_PLAYER",
   WATCHER_EXISTING = "WATCHER_EXISTING",
-  ON_JOIN_SESSION = "ON_JOIN_SESSION"
+  ON_JOIN_SESSION = "ON_JOIN_SESSION",
+  SEND_MESSAGE="SEND_MESSAGE"
 }
 
 export type Item = {
@@ -77,4 +78,10 @@ export type Path = {
 }
 export type CreateSession = {
   Type: string
+}
+
+export type PlaceItemProxy={
+    AvailablePositions: Position[];
+    AvailableItems:Item[];
+    PlacedItems:PlacedItem[];
 }
