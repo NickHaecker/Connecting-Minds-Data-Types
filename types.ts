@@ -32,7 +32,7 @@ export enum ConnectingMindsEvents {
   ON_GET_ITEMS = "ON_GET_ITEMS",
   GET_POSITIONS = "GET_POSITIONS",
   ON_GET_POSITIONS = "ON_GET_POSITIONS",
-
+  ON_UNLOCK_POSITION="ON_UNLOCK_POSITION",
   CREATE_SESSION = "CREATE_SESSION",
   ON_CREATE_SESSION = "ON_CREATE_SESSION",
   CONNECT_TO_SESSION = "CONNECT_TO_SESSION",
@@ -50,7 +50,8 @@ export enum ConnectingMindsEvents {
   DISCONNECT_PLAYER = "DISCONNECT_PLAYER",
   WATCHER_EXISTING = "WATCHER_EXISTING",
   ON_JOIN_SESSION = "ON_JOIN_SESSION",
-  SEND_MESSAGE = "SEND_MESSAGE"
+  SEND_MESSAGE = "SEND_MESSAGE",
+  ROTATE_ITEM = "ROTATE_ITEM"
 }
 
 export type Item = {
@@ -100,4 +101,7 @@ export type UnlockPathProxy = {
 }
 export type UnlockItemProxy = {
   AvaibaleItems: Item[]
+}
+export type UnlockPositionProxy = {
+  AvailablePositions: Position[]
 }
