@@ -50,7 +50,7 @@ export enum ConnectingMindsEvents {
   DISCONNECT_PLAYER = "DISCONNECT_PLAYER",
   WATCHER_EXISTING = "WATCHER_EXISTING",
   ON_JOIN_SESSION = "ON_JOIN_SESSION",
-  SEND_MESSAGE="SEND_MESSAGE"
+  SEND_MESSAGE = "SEND_MESSAGE"
 }
 
 export type Item = {
@@ -80,8 +80,24 @@ export type CreateSession = {
   Type: string
 }
 
-export type PlaceItemProxy={
-    AvailablePositions: Position[];
-    AvailableItems:Item[];
-    PlacedItems:PlacedItem[];
+export type PlaceItemProxy = {
+  AvailablePositions: Position[];
+  AvailableItems: Item[];
+  PlacedItems: PlacedItem[];
+}
+export type RemoveItemProxy = {
+  AvailablePositions: Position[];
+  AvailableItems: Item[];
+  PlacedItems: PlacedItem[];
+}
+export type UnlockedPath = {
+  Path: Path;
+  Positions: Position[]
+}
+export type UnlockPathProxy = {
+  AvailablePositions: Position[];
+  UnlockedPaths: Path[];
+}
+export type UnlockItemProxy = {
+  AvaibaleItems: Item[]
 }
