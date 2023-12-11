@@ -40,7 +40,7 @@ export enum ConnectingMindsEvents {
   LEAVE_SESSION = "LEAVE_SESSION",
   ON_CONNECT_TO_SESSION = "ON_CONNECT_TO_SESSION",
   SESSION_NOT_FOUND = "SESSION_NOT_FOUND",
-  NOT_IN_SESSION="NOT_IN_SESSION",
+  NOT_IN_SESSION = "NOT_IN_SESSION",
   SESSION_IS_OCCUPIED = "SESSION_IS_OCCUPIED",
   ON_INIT_PLAYER = "ON_INIT_PLAYER",
   INIT_PLAYER = "INIT_PLAYER",
@@ -56,8 +56,8 @@ export enum ConnectingMindsEvents {
   ON_LEAVE_SESSION = "ON_LEAVE_SESSION",
   SEND_MESSAGE = "SEND_MESSAGE",
   ROTATE_ITEM = "ROTATE_ITEM",
-  WRONG_PLAYER="WRONG_PLAYER",
-  WRONG_WATCHER="WRONG_WATCHER"
+  WRONG_PLAYER = "WRONG_PLAYER",
+  WRONG_WATCHER = "WRONG_WATCHER"
 }
 
 export type Item = {
@@ -118,3 +118,11 @@ export type ConnectToSession = {
 export type LeaveSession = {
   Type: string
 }
+export enum EClientType {
+  PLAYER = "PLAYER",
+  WATCHER = "WATCHER",
+}
+
+export type ClientType = {
+  Type: EClientType;
+};
