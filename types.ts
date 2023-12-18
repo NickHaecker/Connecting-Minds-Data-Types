@@ -59,9 +59,11 @@ export enum ConnectingMindsEvents {
   ROTATE_ITEM = "ROTATE_ITEM",
   WRONG_PLAYER = "WRONG_PLAYER",
   WRONG_WATCHER = "WRONG_WATCHER",
-  SAVE_SESSION="SAVE_SESSION",
-  ON_SAVE_SESSION="ON_SAVE_SESSION",
-  SAVE_FAILED="SAVE_FAILED"
+  SAVE_SESSION = "SAVE_SESSION",
+  ON_SAVE_SESSION = "ON_SAVE_SESSION",
+  SAVE_FAILED = "SAVE_FAILED",
+  START_SESSION = "START_SESSION",
+  ON_START_SESSION = "ON_START_SESSION"
 }
 
 export type Item = {
@@ -90,7 +92,6 @@ export type Path = {
 export type CreateSession = {
   Type: string
 }
-
 export type PlaceItemProxy = {
   AvailablePositions: Position[];
   AvailableItems: Item[];
