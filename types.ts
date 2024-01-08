@@ -92,6 +92,10 @@ export type Path = {
 export type CreateSession = {
   Type: string
 }
+export type SessionProxy = {
+  ID: string;
+  Name: string;
+}
 export type PlaceItemProxy = {
   AvailablePositions: Position[];
   AvailableItems: Item[];
@@ -131,3 +135,6 @@ export enum EClientType {
 export type ClientType = {
   Type: EClientType;
 };
+export enum SessionStatus {
+  ACTIVE = "ACTIVE", PLAYER_MISSING = "PLAYER_MISSING", WATCHER_MISSING = "WATCHER_MISSING", INACTIVE = "INACTIVE"
+}
