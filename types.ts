@@ -63,7 +63,8 @@ export enum ConnectingMindsEvents {
   ON_SAVE_SESSION = "ON_SAVE_SESSION",
   SAVE_FAILED = "SAVE_FAILED",
   START_SESSION = "START_SESSION",
-  ON_START_SESSION = "ON_START_SESSION"
+  ON_START_SESSION = "ON_START_SESSION",
+  ON_REMOVE_POSITION = "ON_REMOVE_POSITION"
 }
 
 export type Item = {
@@ -118,6 +119,9 @@ export type UnlockItemProxy = {
   AvaibaleItems: Item[]
 }
 export type UnlockPositionProxy = {
+  AvailablePositions: Position[]
+}
+export type RemovePositionProxy = {
   AvailablePositions: Position[]
 }
 export type ConnectToSession = {
