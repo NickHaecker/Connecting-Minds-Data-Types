@@ -71,6 +71,7 @@ export enum ConnectingMindsEvents {
 export type Item = {
   _id: string;
   Name: string;
+  ID:string;
   Description: string;
 };
 export type PlacedItem = {
