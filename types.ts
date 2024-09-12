@@ -38,6 +38,7 @@ export type ItemProxy = {
   Name: string;
   ID: string;
   Description: string;
+  Type: string
 };
 
 export type FilesToIndex = {
