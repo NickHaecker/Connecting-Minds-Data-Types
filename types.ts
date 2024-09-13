@@ -1,5 +1,6 @@
 export enum ConnectingMindsEvents {
   PLACE_ITEM = "PLACE_ITEM",
+  ON_PLACE_ITEM = "ON_PLACE_ITEM",
   REMOVE_ITEM = "REMOVE_ITEM",
   UNLOCK_ITEM = "UNLOCK_ITEM",
   UNLOCK_PATH = "UNLOCK_PATH",
@@ -27,7 +28,7 @@ export enum ConnectingMindsEvents {
   WRONG_WATCHER = "WRONG_WATCHER",
   SAVE_SESSION = "SAVE_SESSION",
   SAVE_FAILED = "SAVE_FAILED",
-
+  SEND_MESSAGE = "SEND_MESSAGE"
 
 
 
@@ -40,6 +41,17 @@ export type ItemProxy = {
   Description: string;
   Type: string
 };
+
+
+export type PlaceItemProxy = {
+  Item: ItemProxy;
+  Position: number[]
+}
+
+export type PlacedItemProxy = {
+  AvailableItems: ItemProxy[];
+  PlacedItems: PlaceItemProxy[];
+}
 
 export type FilesToIndex = {
   IndexType: string;
