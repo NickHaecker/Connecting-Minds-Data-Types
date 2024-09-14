@@ -2,6 +2,7 @@ export enum ConnectingMindsEvents {
   PLACE_ITEM = "PLACE_ITEM",
   ON_PLACE_ITEM = "ON_PLACE_ITEM",
   REMOVE_ITEM = "REMOVE_ITEM",
+  ON_REMOVE_ITEM = "ON_REMOVE_ITEM",
   UNLOCK_ITEM = "UNLOCK_ITEM",
   UNLOCK_PATH = "UNLOCK_PATH",
   INDEX_DATA = "INDEX_DATA",
@@ -48,7 +49,16 @@ export type PlaceItemProxy = {
   Position: number[]
 }
 
+export type RemoveItemProxy = {
+  Item: ItemProxy
+}
+
 export type PlacedItemProxy = {
+  AvailableItems: ItemProxy[];
+  PlacedItems: PlaceItemProxy[];
+}
+
+export type RemovedItemProxy = {
   AvailableItems: ItemProxy[];
   PlacedItems: PlaceItemProxy[];
 }
