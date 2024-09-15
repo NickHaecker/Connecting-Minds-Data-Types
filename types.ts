@@ -29,8 +29,9 @@ export enum ConnectingMindsEvents {
   WRONG_WATCHER = "WRONG_WATCHER",
   SAVE_SESSION = "SAVE_SESSION",
   SAVE_FAILED = "SAVE_FAILED",
-  SEND_MESSAGE = "SEND_MESSAGE"
-
+  SEND_MESSAGE = "SEND_MESSAGE",
+  PREVIEW_ITEM = "PREVIEW_ITEM",
+  ON_PREVIEW_ITEM = "ON_PREVIEW_ITEM"
 
 
 }
@@ -49,6 +50,11 @@ export type PlaceItemProxy = {
   Position: number[]
 }
 
+export type PreviewItemProxy = {
+  Item: ItemProxy,
+  State: boolean
+}
+
 export type RemoveItemProxy = {
   Item: ItemProxy
 }
@@ -61,6 +67,11 @@ export type PlacedItemProxy = {
 export type RemovedItemProxy = {
   AvailableItems: ItemProxy[];
   PlacedItems: PlaceItemProxy[];
+}
+
+export type PreviewdItemProxy = {
+  AvailableItems: ItemProxy[];
+  PreviewdItem: ItemProxy | null
 }
 
 export type FilesToIndex = {
