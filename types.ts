@@ -50,6 +50,11 @@ export type PlaceItemProxy = {
   Position: number[]
 }
 
+export type UseItemProxy = {
+  Item: ItemProxy,
+  Position: number[]
+}
+
 export type PreviewItemProxy = {
   Item: ItemProxy,
   State: boolean
