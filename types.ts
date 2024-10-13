@@ -67,6 +67,7 @@ export type RemoveItemProxy = {
 export type PlacedItemProxy = {
   AvailableItems: ItemProxy[];
   PlacedItems: PlaceItemProxy[];
+  PreviewdItem: ItemProxy | null
 }
 
 export type RemovedItemProxy = {
