@@ -31,9 +31,11 @@ export enum ConnectingMindsEvents {
   SAVE_FAILED = "SAVE_FAILED",
   SEND_MESSAGE = "SEND_MESSAGE",
   PREVIEW_ITEM = "PREVIEW_ITEM",
-  ON_PREVIEW_ITEM = "ON_PREVIEW_ITEM"
-
-
+  ON_PREVIEW_ITEM = "ON_PREVIEW_ITEM",
+  START_QUEST = "START_QUEST",
+  SOLVE_QUEST = "SOLVE_QUEST",
+  ON_START_QUEST = "ON_START_QUEST",
+  ON_SOLVE_QUEST = "ON_SOLVE_QUEST"
 }
 
 export type ItemProxy = {
@@ -44,6 +46,17 @@ export type ItemProxy = {
   Type: string
 };
 
+export type QuestProxy = {
+  Quest: Quest
+}
+
+export type Quest = {
+  _id: string,
+  ID: string,
+  Name: string,
+  Description: string,
+  Solved: boolean
+}
 
 export type PlaceItemProxy = {
   Item: ItemProxy;
@@ -62,6 +75,14 @@ export type PreviewItemProxy = {
 
 export type RemoveItemProxy = {
   Item: ItemProxy
+}
+
+export type SolveQuestProxy = {
+  Quests: Quest[]
+}
+
+export type StartQuestProxy = {
+  Quests: Quest[]
 }
 
 export type PlacedItemProxy = {
