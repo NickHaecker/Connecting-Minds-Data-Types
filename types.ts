@@ -59,9 +59,11 @@ export type Quest = {
 }
 
 export type PlaceItemProxy = {
-  Item: ItemProxy;
+  Item: ItemProxy
   Position: number[]
+  Slot?: string
 }
+
 
 export type UseItemProxy = {
   Item: ItemProxy,
