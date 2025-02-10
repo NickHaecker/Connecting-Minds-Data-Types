@@ -4,6 +4,7 @@ export enum ConnectingMindsEvents {
   REMOVE_ITEM = "REMOVE_ITEM",
   ON_REMOVE_ITEM = "ON_REMOVE_ITEM",
   UNLOCK_ITEM = "UNLOCK_ITEM",
+  ON_UNLOCK_ITEM = "ON_UNLOCK_ITEM",
   UNLOCK_PATH = "UNLOCK_PATH",
   INDEX_DATA = "INDEX_DATA",
   ON_INDEX_DATA = "ON_INDEX_DATA",
@@ -74,6 +75,9 @@ export type PreviewItemProxy = {
   Item: ItemProxy,
   State: boolean
 }
+export type UnlockItemProxy = {
+  Item: ItemProxy
+}
 
 export type RemoveItemProxy = {
   Item: ItemProxy
@@ -116,8 +120,8 @@ export type SessionProxy = {
   Name: string;
 }
 
-export type UnlockItemProxy = {
-  AvaibaleItems: ItemProxy[]
+export type UnlockedItemProxy = {
+  AvaibaleItems: ItemProxy[],
 }
 
 export type ConnectToSession = {
