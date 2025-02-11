@@ -36,7 +36,9 @@ export enum ConnectingMindsEvents {
   START_QUEST = "START_QUEST",
   SOLVE_QUEST = "SOLVE_QUEST",
   ON_START_QUEST = "ON_START_QUEST",
-  ON_SOLVE_QUEST = "ON_SOLVE_QUEST"
+  ON_SOLVE_QUEST = "ON_SOLVE_QUEST",
+  UNLOCK_HINT = "UNLOCK_HINT",
+  ON_UNLOCK_HINT = "ON_UNLOCK_HINT"
 }
 
 export type ItemProxy = {
@@ -77,6 +79,9 @@ export type PreviewItemProxy = {
 }
 export type UnlockItemProxy = {
   Item: ItemProxy
+}
+export type UnlockHintProxy = {
+  Hint: ItemProxy
 }
 
 export type RemoveItemProxy = {
@@ -121,8 +126,12 @@ export type SessionProxy = {
 }
 
 export type UnlockedItemProxy = {
-  AvaibaleItems: ItemProxy[],
+  PlacedItems: PlaceItemProxy[],
 }
+export type UnlockedHintProxy = {
+  AvaibaleItems: ItemProxy[]
+}
+
 
 export type ConnectToSession = {
   Type: string,
