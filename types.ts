@@ -6,6 +6,9 @@ export enum ConnectingMindsEvents {
   UNLOCK_ITEM = "UNLOCK_ITEM",
   ON_UNLOCK_ITEM = "ON_UNLOCK_ITEM",
   UNLOCK_PATH = "UNLOCK_PATH",
+  ON_UNLOCK_PATH = "ON_UNLOCK_PATH",
+  LOCK_PATH = "LOCK_PATH",
+  ON_LOCK_PATH = "ON_LOCK_PATH",
   INDEX_DATA = "INDEX_DATA",
   ON_INDEX_DATA = "ON_INDEX_DATA",
   FINISHED_INDEXING = "FINISHED_INDEXING",
@@ -82,6 +85,26 @@ export type UnlockItemProxy = {
 }
 export type UnlockHintProxy = {
   Hint: ItemProxy
+}
+
+export type UnlockPathProxy = {
+  Path: PathProxy
+}
+export type LockPathProxy = {
+  Path: PathProxy
+}
+
+export type UnlockedPathProxy = {
+  Paths: PathProxy[]
+}
+export type LockedPathProxy = {
+  Paths: PathProxy[]
+}
+
+export type PathProxy = {
+  _id: string,
+  ID: string,
+  Name: string
 }
 
 export type RemoveItemProxy = {
