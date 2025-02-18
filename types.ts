@@ -104,7 +104,8 @@ export type LockedPathProxy = {
 export type PathProxy = {
   _id: string,
   ID: string,
-  Name: string
+  Name: string,
+  Type: string
 }
 
 export type RemoveItemProxy = {
