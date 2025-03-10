@@ -41,7 +41,9 @@ export enum ConnectingMindsEvents {
   ON_START_QUEST = "ON_START_QUEST",
   ON_SOLVE_QUEST = "ON_SOLVE_QUEST",
   UNLOCK_HINT = "UNLOCK_HINT",
-  ON_UNLOCK_HINT = "ON_UNLOCK_HINT"
+  ON_UNLOCK_HINT = "ON_UNLOCK_HINT",
+  SYNCHRONIZE_ITEM = "SYNCHRONIZE_ITEM",
+  ON_SYNCHRONIZE_ITEM = "ON_SYNCHRONIZE_ITEM"
 }
 
 export type ItemProxy = {
@@ -51,6 +53,8 @@ export type ItemProxy = {
   Description: string;
   Type: string
 };
+
+export type PositionProxy = number[]
 
 export type QuestProxy = {
   Quest: Quest
@@ -66,14 +70,14 @@ export type Quest = {
 
 export type PlaceItemProxy = {
   Item: ItemProxy
-  Position: number[]
+  Position: PositionProxy
   Slot?: string
 }
 
 
 export type UseItemProxy = {
   Item: ItemProxy,
-  Position: number[]
+  Position: PositionProxy
 }
 
 export type PreviewItemProxy = {
@@ -85,6 +89,15 @@ export type UnlockItemProxy = {
 }
 export type UnlockHintProxy = {
   Hint: ItemProxy
+}
+
+export type SynchronizeItemnProxy = {
+  Item: ItemProxy,
+  Position: PositionProxy
+}
+
+export type SynchronizedItemnProxy = {
+  PlacedItems: PlaceItemProxy[]
 }
 
 export type UnlockPathProxy = {
