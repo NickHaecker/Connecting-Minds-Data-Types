@@ -166,7 +166,7 @@ export type UnlockedItemProxy = {
   PlacedItems: PlaceItemProxy[],
 }
 export type UnlockedHintProxy = {
-  AvaibaleItems: ItemProxy[]
+  AvailableItems: ItemProxy[]
 }
 
 
