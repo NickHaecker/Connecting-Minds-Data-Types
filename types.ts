@@ -46,6 +46,10 @@ export enum ConnectingMindsEvents {
   ON_SYNCHRONIZE_ITEM = "ON_SYNCHRONIZE_ITEM"
 }
 
+export enum MessageType {
+  ERROR = "ERROR", INFO = "INFO", WARNING = "WARNING"
+}
+
 export type ItemProxy = {
   _id: string;
   Name: string;
